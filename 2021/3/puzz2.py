@@ -23,5 +23,5 @@ def extract_num(nums, criteria):
 oxy_num = extract_num(nums, 'most')
 co2_num = extract_num(nums, 'least')
 print(oxy_num, co2_num)
-print(f'Oxy={oxy_num} CO2={co2_num}')
+print(f'Oxy={int(oxy_num, 2)} CO2={int(co2_num, 2)}')
 print(f'MUL={int(oxy_num, 2)*int(co2_num, 2)}')

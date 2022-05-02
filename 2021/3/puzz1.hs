@@ -5,6 +5,7 @@ main :: IO ()
 main = do
     f <- openFile "input" ReadMode
     nums <- getNumbs f
+    hClose f
     let accs = foldr foldNumbs [0 | x <- nums !! 0] nums
     let ones = [ round $ (fromIntegral acc) / (fromIntegral $ length nums) | acc <- accs]
     let gamm_rate = binToInt (reverse ones) 1
